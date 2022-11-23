@@ -1,39 +1,11 @@
-import { useState } from 'react';
 import img2 from '../../assets/img/leaf-branch-2.png';
 import img3 from '../../assets/img/leaf-branch-3.png';
 
 const NavMenu = () => {
 
-    /*=============== SHOW MENU ===============*/
-        const navMenu = document.getElementById('nav-menu'),
-              navToggle = document.getElementById('nav-toggle'),
-              navClose = document.getElementById('nav-close')
-
-
-        /*=============== REMOVE MENU MOBILE ===============*/
-        if(navToggle){
-            navToggle.addEventListener('click', ()=>{
-                navMenu.classList.add('show-menu')
-            })
-        }
-
-        /*=============== MENU HIDDEN ===============*/
-
-        if(navClose){
-            navClose.addEventListener('click', () => {
-                navMenu.classList.remove('show-menu')
-            })
-        }
-
-        const [ navMenuu, setNavMenuu] = useState(navMenu)
-        const [ navClosee, setNavClosee] = useState(navClose)
-        const [ navTogglee, setNavTogglee] = useState(navToggle)
-
-        
-
   return (
     <nav>
-        <div className="nav__menu" id="nav-menu" menu={navMenuu}>
+        <div className="nav__menu" id="nav-menu" >
 
             <ul className="nav__list">
 
@@ -57,7 +29,7 @@ const NavMenu = () => {
 
             {/*Close Button*/}
 
-            <div className="nav__close" id="nav-close" cerrar={ navClosee }>
+            <div className="nav__close" id="nav-close" >
                 <i className="ri-close-line"></i>
             </div>
 
@@ -71,7 +43,7 @@ const NavMenu = () => {
             
             {/*TOGGLE BUTTON*/}
             
-            <div className="nav__toggle" id="nav-toggle" togg={ navTogglee } >
+            <div className="nav__toggle" id="nav-toggle" >
                 <i className="ri-apps-2-line"></i>
             </div>
 
